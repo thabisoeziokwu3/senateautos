@@ -1914,3 +1914,72 @@ section {
   -webkit-background-clip: border-box !important;
   background-clip: border-box !important
 }
+
+/* ---- v3.8: mobile navbar fits the screen, Contact no longer overflows ---- */
+@media(max-width:700px) {
+  .nav {
+    width: calc(100% - 16px);
+    max-width: calc(100vw - 16px);
+    padding: 5px 6px;
+    gap: 4px;
+    box-sizing: border-box;
+    overflow: hidden
+  }
+
+  .nav nav {
+    min-width: 0;
+    flex: 1 1 auto
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap
+  }
+
+  .nav li {
+    flex: 0 0 auto
+  }
+
+  .nav a {
+    font-size: 10.5px;
+    letter-spacing: .04em;
+    padding: 8px 8px;
+    white-space: nowrap
+  }
+
+  .nav a.brand {
+    flex: 0 0 auto;
+    padding: 2px 4px 2px 2px
+  }
+
+  .nav a.brand img {
+    height: 30px
+  }
+}
+
+@media(max-width:400px) {
+  .nav a {
+    font-size: 9.5px;
+    letter-spacing: .02em;
+    padding: 7px 6px
+  }
+
+  .nav a.brand img {
+    height: 26px
+  }
+}
+
+@media(max-width:340px) {
+  .nav a {
+    font-size: 9px;
+    padding: 6px 4px
+  }
+
+  .nav a.brand img {
+    height: 22px
+  }
+}
